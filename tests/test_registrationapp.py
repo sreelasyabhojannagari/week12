@@ -191,7 +191,7 @@ def test_short_password(setup_teardown):
 
     time.sleep(1)
     alert_text = get_alert_text(driver)
-    assert alert_text == "Password must be at least 6 characters long."
+    assert alert_text == "Password must be atleast 6 characters long."
 
 # Test 4: Valid input — should redirect to greeting.html
 def test_valid_input(setup_teardown):

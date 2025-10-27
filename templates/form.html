@@ -5,14 +5,14 @@
             function validateForm()
             {
                 var username = document.forms["f1"]["username"].value.trim();
-                //var password = document.forms["f1"]["pwd"].value;
+                var password = document.forms["f1"]["pwd"].value;
 
                 if (username === "")
             {
                 alert("Username cannot be empty.");
                 return false;
             }
-            /*if(password === "")
+            if(password === "")
             {
                 alert("Password cannot be empty.");
                 return false;
@@ -21,7 +21,7 @@
             {
                 alert("Password must be atleast 6 characters long.");
                 return false;
-            }*/
+            }
             return true;
             }
         </script>
