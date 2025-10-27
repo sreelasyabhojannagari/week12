@@ -67,7 +67,11 @@ pipeline{
         stage('Stage1'){
             steps{
                 withEnv(['JENKINS_NODE_COOKIE=do_not_kill']){
-                    bat 'start /B python app.py'
+                    powershell '''
+                        $scriptPath = "C:\\Users\\ashwi\\OneDrive\\Desktop\\Ashu\\4-1\\Devops_lab\\week12\\app.py"
+                        Start-Process -FilePath "python" -ArgumentList $scriptPath -NoNewWindow
+                        Write-Host "Python app started from full path"
+                    '''
                 }
             }
         }
