@@ -68,7 +68,7 @@ pipeline{
             steps{
                 withEnv(['JENKINS_NODE_COOKIE=do_not_kill']){
                     powershell '''
-                        $scriptPath = "C:\\Users\\ashwi\\OneDrive\\Desktop\\Ashu\\4-1\\Devops_lab\\week12\\app.py"
+                        $scriptPath = "C:\Users\ashwi\OneDrive\Desktop\Ashu\4-1\Devops_lab\week12\app.py"
                         Start-Process -FilePath "python" -ArgumentList $scriptPath -NoNewWindow
                         Write-Host "Python app started from full path"
                     '''
