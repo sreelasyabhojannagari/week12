@@ -1,4 +1,4 @@
-pipeline {
+/*pipeline {
     agent any
    
     stages {
@@ -58,6 +58,23 @@ pipeline {
         }
         failure {
             echo 'Pipeline failed. Please check the logs.'
+        }
+    }
+}*/
+pipeline{
+    agent any
+    stages{
+        stage('Stage1'){
+            steps{
+                withEnv(['JENKINS_NODE_COOKIE=do_not_kill']){
+                    bat 'start /B python app.py'
+                }
+            }
+        }
+        stage('next'){
+            steps{
+                echo "moved"
+            }
         }
     }
 }
