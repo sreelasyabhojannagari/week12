@@ -1,4 +1,4 @@
-/*pipeline {
+pipeline {
     agent any
    
     stages {
@@ -13,10 +13,10 @@
                     // ✅ Start Flask app in background
                     //bat 'start /B python app.py'
             
-                    bat 'cmd /c start "" python app.py'
+                   // bat 'cmd /c start "" python app.py'
 
                     // ⏱ Wait a few seconds for the server to start
-                    bat 'ping 127.0.0.1 -n 5 > nul'
+                    //bat 'ping 127.0.0.1 -n 5 > nul'
 
                     // ✅ Run tests using pytest
                     //bat 'pytest tests\\test_registrationapp.py --maxfail=1 --disable-warnings --tb=short'
@@ -60,8 +60,8 @@
             echo 'Pipeline failed. Please check the logs.'
         }
     }
-}*/
-pipeline{
+}
+/*pipeline{
     agent any
     stages{
         stage('Stage1'){
@@ -81,4 +81,4 @@ pipeline{
             }
         }
     }
-}
+}*/
