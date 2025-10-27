@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: kubedemoapp-service
+  name: seleniumtestdemoapp-service
 spec:
   selector:
-    app: kubedemoapp
+    app: seleniumtestdemoapp
   ports:
     - protocol: TCP
       port: 5000        # Port exposed by the service
       targetPort: 5000  # Port of the container
-      nodePort: 30088   # NodePort for external access
+      nodePort: 30081   # NodePort for external access
   type: NodePort
