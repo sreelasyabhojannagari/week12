@@ -13,7 +13,7 @@ pipeline {
                     // ✅ Start Flask app in background
                     //bat 'start /B python app.py'
             
-                    bat 'cmd /c start "" python app.py > NUL 2>&1'
+                    bat 'cmd /c start "" python app.py'
 
                     // ⏱ Wait a few seconds for the server to start
                     bat 'ping 127.0.0.1 -n 5 > nul'
