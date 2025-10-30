@@ -40,8 +40,9 @@ pipeline {
             steps {
                 echo "🔐 Logging in to Docker Hub using Jenkins credentials"
 
-                withCredentials([usernamePassword(credentialsId: 'dockerhub-credentials', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
-                    bat "docker login -u sreelasya24 -p Shree2401!"
+                withCredentials([usernamePassword(credentialsId: 'dockerhub-credentials', usernameVariable: 'sreelasya24', passwordVariable: 'Shree2401!')]) {
+                    // ✅ Secure login using Jenkins credentials
+                    bat "docker login -u %DOCKER_USER% -p %DOCKER_PASS%"
                 }
             }
         }
